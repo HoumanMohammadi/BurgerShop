@@ -8,11 +8,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/menus")
-public class ShopController {
+public class MenuController {
 
     private final MenuService menuService;
 
-    public ShopController(MenuService menuService) {
+    public MenuController(MenuService menuService) {
         this.menuService = menuService;
     }
     @GetMapping

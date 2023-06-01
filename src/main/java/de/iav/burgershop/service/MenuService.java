@@ -2,8 +2,10 @@ package de.iav.burgershop.service;
 
 import de.iav.burgershop.model.Menu;
 import de.iav.burgershop.repository.MenuRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Service
 
 public class MenuService {
     private final MenuRepository menuRepository;
