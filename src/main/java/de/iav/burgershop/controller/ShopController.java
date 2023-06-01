@@ -2,9 +2,7 @@ package de.iav.burgershop.controller;
 
 import de.iav.burgershop.model.Menu;
 import de.iav.burgershop.service.MenuService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +16,13 @@ public class ShopController {
         this.menuService = menuService;
     }
     @GetMapping
-    public List<Menu> allMenus(){return MenuService.}
+    public List<Menu> allMenus(){return menuService.listAllMenus();}
+
+    @GetMapping ({"/{id}"})
+    public Menu getSingleMenu(@PathVariable String id){return menuService.returnMenuByID(id);}
+
+    @PostMapping
+    public void addMenu(@RequestBody Menu menu){menuService.addMenu(menu);}
+
+
 }

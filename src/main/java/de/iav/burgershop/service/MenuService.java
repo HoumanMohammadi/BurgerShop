@@ -16,7 +16,7 @@ public class MenuService {
 
     public List<Menu> listAllMenus(){return menuRepository.list();}
 
-    public Menu returnMenuByID(String menuIDToReturn){return menuRepository.getMenuByID(menuIDToReturn)}
+    public Menu returnMenuByID(String menuIDToReturn){return menuRepository.getMenuByID(menuIDToReturn);}
 
     public void changeMenuByID(String menuIDToChange, Menu menu){menuRepository.changeMenuByID(menuIDToChange, menu);}
     public void deleteMenuByID(String menuIDTOoDelete){menuRepository.deleteMenuByID(menuIDTOoDelete);}
