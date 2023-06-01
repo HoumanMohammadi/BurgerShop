@@ -26,4 +26,12 @@ public class MenuRepository {
     public List<Menu> list(){
         return new ArrayList<Menu>(this.menuRepository.values());
     }
+
+    public void changeMenuByID(String menuIDTOChange, Menu menu) {
+        this.menuRepository.replace(menuIDTOChange,menu);
+    }
+
+    public void deleteMenuByID(String menuIDToDelete) {
+        this.menuRepository.remove(menuIDToDelete);
+    }
 }
